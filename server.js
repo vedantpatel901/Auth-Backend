@@ -1,0 +1,14 @@
+import app from "./app.js";
+import dotenv from "dotenv";
+import connectDB from ".src/config/db.js";
+
+dotenv.config() // these is for loading the environment variables 
+
+connectDB();
+
+
+const PORT = process.env.PORT || 5000;
+
+app.listen( PORT,() =>{
+    console.log(`server running on port ${PORT}`);
+})
